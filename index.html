@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="fondoBlanco" id="body">
+
+<div class="cajaFormularioModo1" id="cajaForm">
+    <form onsubmit="return completarYValidarFormulario()">
+        <div>
+            <label>NOMBRE</label>
+            <br> <input class="inputFormRegistro" type="text" name="nombre" placeholder="Nombre" id="nombreCompleto" onkeyup="completarYValidarFormulario()">
+            <p id="mensajeErrorNombre"> </p>
+        </div>
+
+        <div>
+            <label>CORREO ELECTRONICO</label>
+            <input class="inputFormRegistro" type="email" name="email" placeholder="Email" id="email" onkeyup="completarYValidarFormulario()">
+            <p id="mensajeErrorEmail"> </p> 
+        </div>
+        
+        <div>
+            <label>CONTRASEÑA</label>
+            <br> <input class="inputFormRegistro" type="password" name="contra" placeholder="Contra" id="contra" onkeyup="completarYValidarFormulario()">
+
+            <br> <label class="mostrarContraForm"> MOSTRAR CONTRASEÑA </label>
+            <input class="checkboxFormRegistro" type="checkbox" onclick="mostrarContra()">
+            <p id="mensajeErrorEsValida"> </p>
+
+        </div>
+
+        <div>
+            <label>REPETIR CONTRA</label>
+            <br> <input class="inputFormRegistro" type="password" name="contra" placeholder="Confirmar contra" id="repetirContra" onkeyup="completarYValidarFormulario()">
+            <p id="mensajeErrorSonIguales"> </p>
+        </div>
+
+        <button class="botonRegistro" type="submit" id="enviarRegistro">REGISTRAR</button>
+    </form>
+
+    <button class="boton" type="button" onclick="cambiarModoFondo()"> Cambiar Modo </button>
+
+    <div>
+        <button id="botonMostrarRegistros" class="boton" type="button" onclick="mostrarYOcultarRegistros()"> Mostrar/Ocultar Registros </button>
+        <h1 class="h1UsuariosRegistrados"> USUARIO REGISTRADOS: </h1>
+        <div class="mostrarUsuariosRegistrados" id="usuariosRegistrados">
+            
+        </div>
+    </div>
+
+    <button class="boton" type="button" onclick="borrarUsuariosRegistrados()"> Borrar registros </button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
