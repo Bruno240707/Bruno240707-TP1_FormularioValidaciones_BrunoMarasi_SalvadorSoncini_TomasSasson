@@ -179,8 +179,8 @@ const cambiarModoFondo = () => {
     body.classList.toggle("fondoNegro")
     body.classList.toggle("fondoBlanco")
 
-    cajaForm.classList.toggle("cajaFormularioModo1")
-    cajaForm.classList.toggle("cajaFormularioModo2")
+    cajaFormulario.classList.toggle("cajaFormularioModo1")
+    cajaFormulario.classList.toggle("cajaFormularioModo2")
 
 }
 
